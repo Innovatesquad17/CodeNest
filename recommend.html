@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Recommend Internships</h2>
+<form method="POST">
+    <input type="text" name="skills" placeholder="Enter your skills" required><br>
+    <input type="text" name="location" placeholder="Enter your preferred location" required><br>
+    <button type="submit">Get Recommendations</button>
+</form>
+<p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+{% endblock %}

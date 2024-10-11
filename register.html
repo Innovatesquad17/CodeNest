@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Register</h1>
+<form method="POST">
+    Name: <input type="text" name="name" required><br>
+    Institution: <input type="text" name="institution" required><br>
+    Category: <input type="text" name="category" required><br>
+    Email: <input type="email" name="email" required><br>
+    Contact Info: <input type="text" name="contact" required><br>
+    Gender: <input type="text" name="gender" required><br>
+    Area of Interest: <input type="text" name="interest" required><br>
+    Nationality: <input type="text" name="nationality" required><br>
+    Physically Handicapped: <input type="text" name="handicapped"><br>
+    Academic Qualifications: <input type="text" name="qualifications" required><br>
+    Preferred Locations: <input type="text" name="locations" required><br>
+    Skills: <input type="text" name="skills" required><br>
+    Languages Known: <input type="text" name="languages" required><br>
+    <button type="submit">Register</button>
+</form>
+{% endblock %}

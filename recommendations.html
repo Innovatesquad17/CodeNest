@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Recommended Internships</h1>
+
+{% if recommendations %}
+<ul>
+    {% for internship in recommendations %}
+    <li>
+        <strong>{{ internship['Profile'] }}</strong><br>
+        Company: {{ internship['Company'] }}<br>
+        Location: {{ internship['Location'] }}<br>
+        Start Date: {{ internship['Start Date'] }}<br>
+        Stipend: {{ internship['Stipend'] }}
+    </li>
+    <br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No internships found for the selected skills and location.</p>
+{% endif %}
+
+<a href="{{ url_for('recommend') }}">Search Again</a> |
+<a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+{% endblock %}
